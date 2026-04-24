@@ -1,4 +1,14 @@
 package runner;
 
-public class TestRunner {
-}
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = "com.easycheck.steps",
+        plugin = {"pretty"}
+)
+public class TestRunner { }
